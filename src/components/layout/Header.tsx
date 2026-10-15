@@ -244,7 +244,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenConsultation }) => {
           </nav>
 
           {/* Zone 3: Actions + Theme Switcher */}
-          <div className="flex items-center gap-3 shrink-0">
+          <div className="flex items-center gap-1 sm:gap-3 shrink-0">
             {/* Dual-Pill Theme Switcher (Dark & Light according to reference) */}
             <div className={`p-0.5 rounded-xl flex items-center border transition-all ${
               isDark
@@ -255,7 +255,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenConsultation }) => {
                 type="button"
                 onClick={() => setTheme('dark')}
                 aria-label="Switch to Dark Theme"
-                className={`px-2 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition-all ${
+                className={`px-1.5 py-1.5 sm:px-2px-2 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition-all ${
                   isDark
                     ? 'bg-blue-600 text-white shadow-xs'
                     : 'text-slate-500 hover:text-slate-900'
@@ -296,7 +296,9 @@ export const Header: React.FC<HeaderProps> = ({ onOpenConsultation }) => {
             <button
               type="button"
               onClick={onOpenConsultation}
-              className="px-4.5 py-2.5 text-xs font-semibold text-white bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 rounded-lg shadow-lg shadow-blue-600/25 transition-all whitespace-nowrap shrink-0 flex items-center gap-1.5 hover:scale-102 active:scale-98"
+             
+className="hidden sm:inline-flex items-center gap-1.5 px-3 sm:px-4 py-2.5 text-xs font-semibold text-white bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 rounded-lg shadow-lg shadow-blue-600/25 transition-all whitespace-nowrap shrink-0"
+
             >
               <span>Book Consultation</span>
               <ArrowRight className="w-3.5 h-3.5" />
