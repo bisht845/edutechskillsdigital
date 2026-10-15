@@ -31,14 +31,14 @@ export const Header: React.FC<HeaderProps> = ({ onOpenConsultation }) => {
         : 'bg-white/95 backdrop-blur-md border-b border-slate-200 text-slate-900'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between gap-6 h-18">
+        <div className="flex items-center justify-between gap-2 sm:gap-4 min-h-[64px] py-2">
           {/* Zone 1: Single clean text element wordmark */}
           <Link
             to="/"
             onClick={closeAll}
-            className={`text-xl sm:text-2xl font-extrabold tracking-tight whitespace-nowrap shrink-0 transition-colors flex items-center gap-1.5 ${
-              isDark ? 'text-white hover:text-blue-400' : 'text-slate-900 hover:text-blue-600'
-            }`}
+            className={`text-sm min-[360px]:text-base sm:text-2xl font-extrabold tracking-tight whitespace-nowrap shrink-0 transition-colors flex items-center gap-1 ${
+  isDark ? 'text-white hover:text-blue-400' : 'text-slate-900 hover:text-blue-600'
+}`}
           >
             <span>EduTechSkills</span>
             <span className="text-blue-600 bg-gradient-to-r from-blue-500 to-indigo-500 bg-clip-text text-transparent">
